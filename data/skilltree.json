@@ -8,7 +8,7 @@
         {
           "icon": "csharp-original.svg",
           "content": "C#",
-          "comment": "Langjährige Begleitung; schnelle Orientierung in bestehenden Projekten und Codebasen.",
+          "comment": "Langjährige Begleitung; schnelle Orientierung in bestehenden Projekten.",
           "children": [
             {
               "icon": "dot-net-original.svg",
@@ -37,7 +37,7 @@
         {
           "icon": "cplusplus-original.svg",
           "content": "C++",
-          "comment": "Ältere Sprachkonzepte waren zunächst ungewohnt, wurden im Projektverlauf aber klarer.",
+          "comment": "Erfahrung mit Embedded-Entwicklung",
           "children": [
             {
               "icon": "arduino-original.svg",
@@ -90,7 +90,8 @@
                 {
                   "content": "Habit Tracker \"Rise Up\"",
                   "comment": "Funktionaler Prototyp",
-                  "icon": "android-original.svg"
+                  "icon": "android-original.svg",
+                  "repo": "RiseUp"
                 }
               ],
               "class": "project-group"
@@ -173,7 +174,7 @@
         },
         {
           "content": "Webentwicklung",
-          "comment": "Fühle mich in HTML, CSS, JavaScript, PHP am wohlsten",
+          "comment": "Mehrere, unterschiedlichste Projekte umgesetzt",
           "children": [
             {
               "icon": "html5-original.svg",
@@ -250,7 +251,7 @@
                 {
                   "icon": "wordpress-original.svg",
                   "content": "WP Questionaire Builder",
-                  "comment": "Für eine Freundin entwickelt",
+                  "comment": "Plugin zum Erstellen von Fragebögen. Für eine Freundin entwickelt",
                   "repo": "wp-questionaire-builder"
                 }
               ],
@@ -265,23 +266,50 @@
       "content": "Datenbanken",
       "children": [
         {
-          "content": "Datenmodellierung"
+          "content": "Datenmodellierung",
+          "children": [
+            {
+              "content": "Entity-Relationship-Modell"
+            },
+            {
+              "content": "ORM-Modell"
+            },
+            {
+              "content": "Normalisierung"
+            },
+            {
+              "conten": "Kardinalitäten"
+            }
+          ]
         },
         {
-          "content": "Relationale Datenbanken"
+          "content": "Relationale Datenbanken",
+          "children": [
+            {
+              "icon": "mariadb-original.svg",
+              "content": "MariaDB"
+            },
+            {
+              "content": "Microsoft SQL Server"
+            },
+            {
+              "content": "REST-API"
+            }
+          ]
         },
         {
-          "icon": "mariadb-original.svg",
-          "content": "MariaDB"
-        },
-        {
-          "icon": "mysql-original.svg",
-          "content": "MySQL"
-        },
-        {
-          "icon": "sqlite-original.svg",
           "content": "SQL",
-          "comment": "Abfragen und Joins sicher anwendbar."
+          "children": [
+            {
+              "icon": "mysql-original.svg",
+              "content": "MySQL"
+            },
+            {
+              "icon": "sqlite-original.svg",
+              "content": "SQL",
+              "comment": "Abfragen und Joins sicher anwendbar."
+            }
+          ]
         }
       ]
     },
@@ -296,7 +324,7 @@
             {
               "icon": "bash-original.svg",
               "content": "Bash",
-              "comment": "Syntax grundsätzlich verständlich; bisher vor allem vorhandene Skripte und Beispiele angepasst."
+              "comment": "Syntax grundsätzlich verständlich; bisher vor allem vorhandene Skripte und Beispiele angepasst"
             },
             {
               "content": "GNU Stow",
@@ -310,7 +338,7 @@
         },
         {
           "content": "Netzwerk und Webserver",
-          "comment": "Mehr verwenden, als verstehen",
+          "comment": "Intensive Beschäftigung durch Selbstorganisation auf eigenem Server",
           "children": [
             {
               "content": "DNS"
@@ -394,7 +422,24 @@
       "content": "Konzepte",
       "children": [
         {
-          "content": "Objektorientierte Programmierung"
+          "content": "Objektorientierte Programmierung",
+          "children": [
+            {
+              "content": "Klassen, Objekte & Methoden"
+            },
+            {
+              "content": "Properties & Konstuktoren"
+            },
+            {
+              "content": "Kapselung und Sichtbarkeit"
+            },
+            {
+              "content": "Exceptions und Fehlerbehandlung"
+            },
+            {
+              "content": "UML-Klassendiagramme"
+            }
+          ]
         },
         {
           "content": "Scrum",
@@ -405,7 +450,24 @@
           "children": [
             {
               "icon": "git-original.svg",
-              "content": "Git"
+              "content": "Git",
+              "children": [
+                {
+                  "content": "Push/ Pull"
+                },
+                {
+                  "content": "Stage/ Commit"
+                },
+                {
+                  "content": "Clone"
+                },
+                {
+                  "content": "Branching"
+                },
+                {
+                  "content": "Merge Konflikte"
+                }
+              ]
             },
             {
               "icon": "github-original.svg",

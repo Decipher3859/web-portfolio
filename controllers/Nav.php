@@ -9,8 +9,6 @@ class Nav
       'links' => [
         ['url' => '/', 'name' => 'Home'],
         ['url' => '/skilltree', 'name' => 'Skilltree'],
-        ['url' => '/projects', 'name' => 'Projekte'],
-        ['url' => '/next-steps', 'name' => 'Ausbildung'],       
         ['url' => '/contact', 'name' => 'Kontakt'],       
       ]
     ];

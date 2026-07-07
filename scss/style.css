@@ -12082,7 +12082,7 @@ textarea.form-control-lg {
 
 :root {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --color-primary-color: #6189ed;
+  --color-primary-color: #e5edff;
   --color-primary-shade: #e9eef5;
   --color-primary-shade-light: #d9e2ec;
   --color-secondary-color: #5f7185;
@@ -12363,10 +12363,11 @@ header .navbar-nav {
 }
 
 .motivation > p {
-  max-width: 680px;
+  max-width: min(100%, 68ch);
   margin: 0;
-  font-size: clamp(1.02rem, 2vw, 1.16rem);
-  overflow-wrap: anywhere;
+  font-size: clamp(1rem, 0.94rem + 0.28vw, 1.12rem);
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 .landing-quote {
@@ -12406,7 +12407,7 @@ header .navbar-nav {
   top: clamp(-1.9rem, -2.4vw, -0.9rem);
   right: clamp(-7.5rem, -8vw, -3rem);
   width: 100%;
-  max-width: clamp(120px, 13vw, 176px);
+  max-width: 176px;
   aspect-ratio: 4/5;
   height: auto;
   min-height: 0;
@@ -13061,34 +13062,72 @@ h3 {
     margin: 0.75rem 0 0;
   }
 }
-@media (max-width: 900px) {
-  .intro,
-  .contact-layout {
+@media (max-width: 1040px) {
+  .intro {
     grid-template-columns: 1fr;
+  }
+  .intro .profile-layout {
+    order: -1;
   }
   .motivation h1 {
     white-space: normal;
   }
-  .profile-layout {
-    display: grid;
+  .intro .profile-layout {
+    position: relative;
+    display: block;
+    overflow: visible;
+  }
+  .intro .profile-image {
+    position: absolute;
+    top: -2.35rem;
+    right: clamp(1rem, 3vw, 1.4rem);
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    box-shadow: 0 24px 70px rgba(8, 10, 18, 0.35);
+  }
+  .intro .profile-card {
+    padding-right: max(clamp(1.25rem, 3vw, 1.6rem), 176px + clamp(2rem, 6vw, 2.8rem));
+  }
+}
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+  .intro .profile-layout {
+    position: relative;
+    display: block;
     overflow: hidden;
   }
-  .profile-image {
-    position: static;
+  .intro .profile-image {
+    position: absolute;
+    top: clamp(1rem, 3vw, 1.4rem);
+    right: clamp(1rem, 3vw, 1.4rem);
     width: 100%;
-    max-width: none;
-    aspect-ratio: auto;
-    min-height: 0;
-    object-fit: contain;
-    object-position: center;
+    max-width: 176px;
+    aspect-ratio: 4/5;
     height: auto;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
+    min-height: 0;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    box-shadow: 0 24px 70px rgba(8, 10, 18, 0.35);
+    z-index: 1;
   }
-  .profile-card {
+  .intro .profile-card {
+    position: relative;
+    z-index: 0;
+    padding-top: clamp(1.25rem, 3vw, 1.6rem);
     padding-right: clamp(1.25rem, 3vw, 1.6rem);
     padding-left: clamp(1.25rem, 3vw, 1.6rem);
+  }
+  .intro .contact-kicker,
+  .intro .contact-list li:first-child > span,
+  .intro .contact-list li:first-child > strong {
+    max-width: calc(100% - 176px - 0.75rem);
   }
 }
 @media (max-width: 640px) {
